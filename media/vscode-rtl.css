@@ -1,0 +1,80 @@
+/* vscode-rtl.css
+   فقط پیام‌ها و ناحیه نوشتن چت راست‌چین شوند؛ کدها و ادیتورها LTR بمانند.
+*/
+
+/* پیام‌ها و ورودی چت RTL */
+.chat-view .message-content,
+.chat-view .chat-message,
+.interactive-session .message-content,
+.chat-view .composer,
+.chat-view .chat-input,
+.chat-view [role="textbox"],
+.chat-view textarea,
+.chat-view input {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+/* پیام‌های Copilot Chat و Interactive Session */
+div.interactive-item-container.interactive-response,
+div.interactive-item-container .interactive-response,
+div.interactive-item-container .interactive-response-markdown,
+div.interactive-item-container .interactive-response-content,
+div.chat-markdown-part.rendered-markdown,
+div.chat-markdown-part .rendered-markdown {
+  direction: rtl !important;
+  text-align: right !important;
+  unicode-bidi: plaintext !important;
+  font-family: inherit !important;
+}
+
+/* فقط container ورودی چت RTL شود، نه spanها */
+div.interactive-input-editor {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+/* متن ورودی چت Copilot: فقط رنگ و فونت */
+div.interactive-input-editor .view-lines,
+div.interactive-input-editor .view-lines span,
+div.interactive-input-editor .view-lines .mtk1,
+div.interactive-input-editor .view-lines .mtk5,
+div.interactive-input-editor .view-lines .mtk9,
+div.interactive-input-editor .view-lines .mtk10,
+div.interactive-input-editor .view-lines .mtk12 {
+  font-family: "Tahoma", "Segoe UI", "Arial", sans-serif !important;
+  font-size: 16px !important;
+  color: #fff !important;
+  background: transparent !important;
+  opacity: 1 !important;
+  caret-color: #fff !important;
+  text-shadow: none !important;
+  mix-blend-mode: normal !important;
+  /* direction و unicode-bidi حذف شد */
+}
+
+/* رنگ placeholder (در صورت وجود) */
+div.interactive-input-editor .view-lines::before,
+div.interactive-input-editor .view-lines::after {
+  color: #aaa !important;
+  opacity: 1 !important;
+}
+
+/* کدها و ادیتورها همچنان LTR */
+div.interactive-response pre,
+div.interactive-response code,
+div.interactive-response-markdown pre,
+div.interactive-response-markdown code,
+div.chat-markdown-part pre,
+div.chat-markdown-part code,
+.monaco-editor,
+.editor,
+.monaco-editor .view-lines,
+code,
+pre,
+.markdown-preview pre,
+.markdown-preview code {
+  direction: ltr !important;
+  text-align: left !important;
+  unicode-bidi: isolate !important;
+}

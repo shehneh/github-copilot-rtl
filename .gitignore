@@ -1,0 +1,23 @@
+node_modules/
+.vscode/
+*.vsix
+.DS_Store
+npm-debug.log
+dist/
+.env
+coverage/
+.vscode-test/
+
+# Ignore local settings
+.vscode/
+
+# Mac
+*.DS_Store
+
+# Windows
+Thumbs.db
+
+# Logs
+logs
+*.log
+npm-debug.log*
