@@ -1,6 +1,6 @@
 {
-  "name": "copilot-rtl",
-  "displayName": "GitHub Copilot RTL",
+  "name": "github-copilot-rtl",
+  "displayName": "GitHub Copilot RTL (RTL)",
   "description": "راست‌چین کردن Copilot Chat و چت VS Code برای فارسی‌زبانان",
   "version": "0.0.1",
   "publisher": "shehneh.m",
