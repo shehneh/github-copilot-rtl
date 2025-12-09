@@ -1,0 +1,39 @@
+{
+  "name": "github-copilot-rtl",
+  "displayName": "GitHub Copilot RTL (RTL)",
+  "description": "راست‌چین کردن Copilot Chat و چت VS Code برای فارسی‌زبانان",
+  "version": "0.0.1",
+  "publisher": "shehneh.m",
+  "engines": {
+    "vscode": ">=1.70.0"
+  },
+  "categories": ["Other"],
+  "contributes": {
+    "commands": [
+      {
+        "command": "copilot-rtl.enableRtl",
+        "title": "Enable Copilot RTL"
+      }
+    ]
+  },
+  "activationEvents": [
+    "onCommand:copilot-rtl.enableRtl"
+  ],
+  "main": "./extension.js"
+
+  ,"scripts": {
+    "package": "vsce package",
+    "publish": "vsce publish --pat $VSCE_TOKEN"
+  },
+  "files": [
+    "extension.js",
+    "media/**",
+    "README.md",
+    "package.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shehneh/github-copilot-rtl"
+  },
+  "license": "MIT"
+}
